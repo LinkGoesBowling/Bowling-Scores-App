@@ -24,19 +24,15 @@ let shot21Count = 0;
 let shot22Count = 0;
 let shot = 1;
 let score = 0;
-let previousShot = "Error";
-let nextShot = 0;
-let inTwoShots = 0;
+let previousShot = 0;
 let twoShotsAgo = 0;
 let doubleStrike = false;
 let strikeFollowedByPinCount = false;
-
 
 function addPins(count){
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 		if (previousShot === 10 - count){
 			addSpare();
-			inTwoShots = 10 - count;
 			return;
 		}
 		if (previousShot > 10 - count){
@@ -47,15 +43,14 @@ function addPins(count){
 			shot++;
 			console.log("Frame: " + (Math.floor(shot / 2 + 0.5)));
 			previousShot = count;
-			inTwoShots = count;
 			if (previousShot === "spare"){
 				score += count * 2
 			}
-			else {
+			if (previousShot !== "spare" && twoShotsAgo !== 10) {
 				score += count
 			}
-			if (twoShotsAgo === 10 && doubleStrike === false){
-			score += count;
+			if (twoShotsAgo === 10){
+			score += count * 2;
 		}
 		}
 	}
@@ -68,12 +63,10 @@ function addPins(count){
 		}
 		if (previousShot === 10){
 			score+= count;
-			nextShot = count;
 			strikeFollowedByPinCount = true;
 		}
 		if (doubleStrike === true){
 			score += count * 2;
-			inTwoShots = count;
 		}
 		else {
 			score += count;
@@ -156,18 +149,34 @@ function addPins(count){
 	console.log("Score: " + score);
 }
 function addStrike(){
+	if (previousShot !== 10){
+		doubleStrike = false;
+	}
 	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17){
 	if (previousShot === "spare"){
 		console.log("STRIIIIIIIKE!!!");
 		shot++;
 		shot++;
-		score +=  10 + nextShot + inTwoShots + (10 - twoShotsAgo);
+		score +=  20;
 	}
-	else {
+	if (previousShot !== "spare" && previousShot !== 10) {
 		console.log("STRIIIIIIIKE!!!");
 		shot++;
 		shot++;
-		score += 10 + nextShot + inTwoShots;
+		score += 10;
+	}
+	if (previousShot === 10 && doubleStrike === false){
+		console.log("STRIIIIIIIKE!!!");
+		score += 20;
+		shot++;
+		shot++;
+		twoShotsAgo = 10;
+	}
+	if (doubleStrike === true){
+		console.log("STRIIIIIIIKE!!!");
+		score += 30;
+		shot++;
+		shot++;
 	}
 	}
 	else if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
@@ -180,13 +189,8 @@ function addStrike(){
 	console.log("Frame " + (Math.floor(shot / 2 + 0.5)) + ":");
 	if (previousShot === 10){
 		doubleStrike = true;
-		inTwoShots = 10;
-	}
-	if (previousShot !== 10){
-		doubleStrike = false;
 	}
 	previousShot = 10;
-	nextShot = 10;
 }
 function addSpare(){
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
@@ -216,5 +220,5 @@ function addSpare(){
 	console.log("Score: " + score);
 }
 function tenthFrame(){
-	console.log("The 10th frame is not programmed yet!")
+	console.log("The 10th frame is not programmed yet!");
 }
