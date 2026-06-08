@@ -30,6 +30,8 @@ let doubleStrike = false;
 let strikeFollowedByPinCount = false;
 let isTenthFrame = false;
 let strikeButtonPressed = false;
+let spareButtonPressed = false;
+let shot20Completed = false;
 
 function addPins(count){
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
@@ -56,6 +58,9 @@ function addPins(count){
 	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log(count + " pins added to score");
 		shot++;
+		if (shot === 19 || shot === 20 || shot === 21){
+		tenthFrame(count);
+		}
 		if (previousShot === "spare"){
 			score += count;
 		}
@@ -68,9 +73,6 @@ function addPins(count){
 			score += count * 2;
 			strikeFollowedByPinCount = true;
 			doubleStrike = false;
-		}
-		if (shot === 19 || shot === 20 || shot === 21){
-			tenthFrame(count);
 		}
 		else {
 			score += count;
@@ -142,23 +144,11 @@ function addPins(count){
 	if (shot === 18){
 		shot18Count = count;
 	}
-	if (shot === 19){
-		shot19Count = count;
-	}
-	if (shot === 20){
-		shot20Count = count;
-	}
-	if (shot === 21){
-		shot21Count = count;
-	}
-	if (shot === 22){
-		shot22Count = count;
-	}
 	console.log("Score: " + score);
 }
 function addStrike(){
 	strikeButtonPressed = true;
-	if (shot >= 19){
+	if (shot === 19 || shot === 20 || shot === 21){
 	tenthFrame(10);
 	shot = 20;
 	}
@@ -204,6 +194,8 @@ function addStrike(){
 	strikeButtonPressed = false;
 }
 function addSpare(){
+	spareButtonPressed = true;
+	spareButtonPressed = false;
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 	if (strikeFollowedByPinCount === true){
 		console.log("Congrats! You got a spare.");
@@ -224,33 +216,44 @@ function addSpare(){
 	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log("That's the first shot of the frame!");
 	}
-	else {
-		tenthFrame();
+	else if (shot === 21) {
+		tenthFrame(10 - shot20Count);
+	}
+	else if (shot === 22) {
+		if (shot21Count === 10){
+			tenthFrame(10 - shot21Count);
+		}
+		else {
+			console.log("Not a spare situation")
+		}
 	}
 	
 	console.log("Score: " + score);
 	console.log(shot);
 }
-function tenthFrame(shots){ //script executes if(shot === 20) when shot === 21 for some reason
+function tenthFrame(shots){
 	if (shot === 19){
 		shot++;
 	}
-	if (shot === 20 && shot !== 21 && shot !== 22){
+	if (shot === 20 && shot20Completed === false){
 		if (doubleStrike === true){
-			shot++;
 			console.log("Shot 20");
-			score += shots * 3;
+				score += shots * 3;
+			shot20Count = shots;
+			shot20Completed = true;
+			doubleStrike = true;
 		}
 		if (doubleStrike === false && previousShot !== 10){
-			shot++;
 			console.log("Shot 20");
 			score += shots;
+			shot20Count = shots;
 		}
 		if (doubleStrike === false && previousShot === 10){
-			shot++;
 			console.log("Shot 20");
 			score += shots * 2;
+			shot20Count = shots;
 		}
+		shot++;
 		console.log(shot);
 		return;
 	}
@@ -268,12 +271,15 @@ function tenthFrame(shots){ //script executes if(shot === 20) when shot === 21 f
 			if (shots > 10 - shot20Count){
 				console.log("You can't hit more than 10 pins in a frame!");
 			}
-			if (shots === 10 - shot20Count){
+			if (shots === 10 - shot20Count || spareButtonPressed === true){
 				score += shots;
 			}
 			else {
-				addPins(shots);
+				score += 10 - shot20Count;
 			}
+		}
+		if (previousShot === 10 && doubleStrike === false){
+			score += shots;
 		}
 	if (shot === 22){
 		console.log("Shot 22")
