@@ -1,4 +1,5 @@
 console.log("Programmed by Link Kelly (LinkGoesBowling)");
+//start of score calculator
 let shot1Count = undefined;
 let shot2Count = undefined;
 let shot3Count = undefined;
@@ -32,6 +33,8 @@ let strikeButtonPressed = false;
 let spareButtonPressed = false;
 let shot20Completed = false;
 let allGames = [];
+let sum = 0;
+let shot21Completed = true;
 
 function addPins(count){
 		if (shot === 19 || shot === 20 || shot === 21){
@@ -223,7 +226,7 @@ function addSpare(){
 			tenthFrame(10 - shot21Count);
 		}
 		else {
-			console.log("Not a spare situation")
+			console.log("Not a spare situation");
 		}
 	}
 	
@@ -261,10 +264,14 @@ function tenthFrame(shots){
 		console.log("Shot 21");
 		if (doubleStrike === true && shot20Count === 10){
 			score += shots * 2;
+			console.log("Score: " + score);
+			shot21Count = shots;
 			shot++;
 		}
 		if (doubleStrike === false && shot20Count === 10){
 			score += shots;
+			console.log("Score: " + score);
+			shot21Count = shots;
 			shot++;
 		}
 		if (shot20Count !== 10){
@@ -274,42 +281,64 @@ function tenthFrame(shots){
 			if (shots === 10 - shot20Count || spareButtonPressed === true){
 				if (shot17Count === 10){
 					score += shots * 2;
+					console.log("Score: " + score);
+					shot21Count = shots;
+					shot21Completed = true;
 					shot++;
 				}
 				if (shot17Count !== 10){
 					score += shots;
+					console.log("Score: " + score);
+					shot21Count = shots;
+					shot21Completed = true;
 					shot++;
 				}
 			}
 			if (shots < 10 - shot20Count){
 				if (shot17Count !== 10){
 					score += shots;
-					console.log("Shot 17 was not a strike");
+					console.log("Score: " + score);
+					shot21Count = shots;
 					endGame();
 				}
 				if (shot17Count === 10){
 					score += shots * 2;
-					console.log("Shot 17 was a strike");
+					console.log("Score: " + score);
+					shot21Count = shots;
 					endGame();
 				}
 			}
 			else{
 				score += 10 - shot20Count;
+				shot21Count = shots;
 				shot++;
 			}
 		}
 		if (previousShot === 10 && doubleStrike === false){
 			score += shots;
+			shot21Count = shots;
+			shot21Completed = true;
 			shot++;
 		}
-		console.log(shot);
 	}
-if (shot === 22){
+	if (shot === 22){
 		console.log("Shot 22");
-		score += shots;
+		if (shots > 10 - shot21Count && shot21Count !== 10){
+			console.log("You can't hit more than 10 pins in a frame!");
+		}
+		if (shots === 10 - shot21Count && shot21Count !== 10){
+			score += shots;
+		}
+		if (shots < 10 - shot21Count){
+			score += shots;
+		}
+		if (shot21Count === 10){
+			score += shots;
+		}
 		endGame();
-	}
 }
+}
+//end of score calculator
 function endGame(){
 	allGames.push(score);
  shot1Count = undefined;
@@ -345,4 +374,10 @@ function endGame(){
  spareButtonPressed = false;
  shot20Completed = false;
 	console.log(allGames);
+	calculateAverage();
+}
+function calculateAverage(){
+	for (let i = 0; i < allGames.length; i++){
+		console.log("Average: " + (sum += parseInt(allGames[i])) / allGames.length);
+	}
 }
