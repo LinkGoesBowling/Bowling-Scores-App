@@ -1,27 +1,27 @@
 console.log("Programmed by Link Kelly (LinkGoesBowling)");
 console.log("Frame 1:");
-let shot1Count = 0;
-let shot2Count = 0;
-let shot3Count = 0;
-let shot4Count = 0;
-let shot5Count = 0;
-let shot6Count = 0;
-let shot7Count = 0;
-let shot8Count = 0;
-let shot9Count = 0;
-let shot10Count = 0;
-let shot11Count = 0;
-let shot12Count = 0;
-let shot13Count = 0;
-let shot14Count = 0;
-let shot15Count = 0;
-let shot16Count = 0;
-let shot17Count = 0;
-let shot18Count = 0;
-let shot19Count = 0;
-let shot20Count = 0;
-let shot21Count = 0;
-let shot22Count = 0;
+let shot1Count = undefined;
+let shot2Count = undefined;
+let shot3Count = undefined;
+let shot4Count = undefined;
+let shot5Count = undefined;
+let shot6Count = undefined;
+let shot7Count = undefined;
+let shot8Count = undefined;
+let shot9Count = undefined;
+let shot10Count = undefined;
+let shot11Count = undefined;
+let shot12Count = undefined;
+let shot13Count = undefined;
+let shot14Count = undefined;
+let shot15Count = undefined;
+let shot16Count = undefined;
+let shot17Count = undefined;
+let shot18Count = undefined;
+let shot19Count = undefined;
+let shot20Count = undefined;
+let shot21Count = undefined;
+let shot22Count = undefined;
 let shot = 1;
 let score = 0;
 let previousShot = 0;
@@ -53,7 +53,7 @@ function addPins(count){
 		strikeFollowedByPinCount = false;
 		}
 	}
-	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17){
+	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log(count + " pins added to score");
 		shot++;
 		if (previousShot === "spare"){
@@ -158,10 +158,14 @@ function addPins(count){
 }
 function addStrike(){
 	strikeButtonPressed = true;
+	if (shot >= 19){
+	tenthFrame(10);
+	shot = 20;
+	}
 	if (previousShot !== 10){
 		doubleStrike = false;
 	}
-	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17){
+	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 	if (previousShot === "spare"){
 		console.log("STRIIIIIIIKE!!!");
 		shot++;
@@ -192,9 +196,6 @@ function addStrike(){
 	else if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 		console.log("It's the second shot! Click the spare button instead.");
 	}
-	else if (shot === 19 || shot === 20 || shot === 21){
-		tenthFrame(10);
-	}
 	console.log("Score: " + score);
 	if (previousShot === 10){
 		doubleStrike = true;
@@ -220,7 +221,7 @@ function addSpare(){
 	previousShot = "spare";
 	}
 	}
-	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17){
+	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log("That's the first shot of the frame!");
 	}
 	else {
@@ -230,62 +231,53 @@ function addSpare(){
 	console.log("Score: " + score);
 	console.log(shot);
 }
-function tenthFrame(shots){
-	isTenthFrame = true;
+function tenthFrame(shots){ //script executes if(shot === 20) when shot === 21 for some reason
 	if (shot === 19){
-		if (doubleStrike === false && previousShot !== 10){
-			score += shots;
-			if (shots === 10){
-				shot++;
-			}
-			shot++;
-		}
-		if (doubleStrike === true){
-			score += shots * 3;
-			previousShot = shots;
-			twoShotsAgo = 10;
-			if (shots === 10){
-				shot++;
-			}
-			shot++;
-		}
-		if (doubleStrike === false && previousShot === 10 && previousShot !== "spare"){
-			score += shots * 2;
-			previousShot = shots;
-			twoShotsAgo = 10;
-			if (shots === 10){
-				console.log("STRIIIIIIIKE!!!");
-				shot++;
-			}
-			shot++;
-		}
-		if (previousShot === "spare" && doubleStrike === false){
-			score += shots;
-			previousShot = shots;
-			if (shots === 10){
-				shot++;
-			}
-			shot++;
-		}
+		shot++;
 	}
-	if (shot === 20){
-		if (previousShot !== 10){
-			if (previousShot > 10 - shots){
+	if (shot === 20 && shot !== 21 && shot !== 22){
+		if (doubleStrike === true){
+			shot++;
+			console.log("Shot 20");
+			score += shots * 3;
+		}
+		if (doubleStrike === false && previousShot !== 10){
+			shot++;
+			console.log("Shot 20");
+			score += shots;
+		}
+		if (doubleStrike === false && previousShot === 10){
+			shot++;
+			console.log("Shot 20");
+			score += shots * 2;
+		}
+		console.log(shot);
+		return;
+	}
+	if (shot === 21){
+		console.log("Shot 21");
+		if (doubleStrike === true){
+			score += shots * 2;
+			shot = 22;
+		}
+		if (doubleStrike === false && shot20Count !== 10){
+			score += shots;
+			shot = 22;
+		}
+		if (shot20Count !== 10){
+			if (shots > 10 - shot20Count){
 				console.log("You can't hit more than 10 pins in a frame!");
-				console.log(shot);
 			}
-			if (shots === 10){
-				console.log("STRIIIIIIIKE!!!");
-				shot++;
+			if (shots === 10 - shot20Count){
+				score += shots;
 			}
 			else {
-				score += 10 - previousShot
+				addPins(shots);
 			}
 		}
-		if (twoShotsAgo === 10){
-			score += (10 - previousShot) * 2;
-		}
-		shot++;
-		console.log("shot");
+	if (shot === 22){
+		console.log("Shot 22")
+		score += shots;
+	}
 	}
 }
