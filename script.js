@@ -341,3 +341,6 @@ function tenthFrame(shots){
 	}
 }
 //end of score calculator
+function endGame(){
+	console.log("Final score: " + score);
+}
