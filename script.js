@@ -41,6 +41,7 @@ function addPins(count){
 		console.log("Shot 22");
 		score += count - 10;
 		shot22Count = count;
+		endGame();
 	}
 		if (shot === 19 || shot === 20 || shot === 21){
 			tenthFrame(count);
@@ -159,7 +160,7 @@ function addStrike(){
 	if (previousShot !== 10){
 		doubleStrike = false;
 	}
-	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
+	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19 && shot !== 21){
 	if (previousShot === "spare"){
 		console.log("STRIIIIIIIKE!!!");
 		shot++;
