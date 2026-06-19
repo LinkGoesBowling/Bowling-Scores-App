@@ -253,6 +253,7 @@ function addSpare(){
 	
 	console.log("Score: " + score);
 	console.log(shot);
+	endGame();
 }
 function tenthFrame(shots){
 	if (shot21Completed === false){
