@@ -96,12 +96,6 @@ function addPins(count){
 		}
 		previousShot = count;
 	}
-	else if (shot === 22){
-		if (previousShot === 10 || previousShot !== 10){
-			console.log("Shot 22 executed");
-			score += count;
-		}
-	}
 	if (shot === 1){
 		shot1Count = count;
 	}
@@ -196,20 +190,30 @@ function addStrike(){
 	if (shot === 17){
 		shot17Count = 10;
 	}
+	}
 	else if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 		console.log("It's the second shot! Click the spare button instead.");
 	}
 	if (previousShot === 10){
 		doubleStrike = true;
 	}
+	if (shot === 22 && shot21Completed === true){
+		console.log("Shot 22");
+		if (strikeButtonPressed === true){
+		if (previousShot === 10 || shot21Count === "spare"){
+		score += 10;
+		endGame();
+		}
+		}
 		else if (previousShot !== 10 || shot21Count !== "spare") {
 			console.log("That's not a strike situation! Use the spare button instead.");
 		}
+	}
 	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
-		return;
-	}
+	return;
+}
 function addSpare(){
 	spareButtonPressed = true;
 	spareButtonPressed = false;
@@ -349,5 +353,4 @@ function endGame(){
 	console.log("Final score: " + score);
 	shot = 1;
 	score = 0;
-}
 }
