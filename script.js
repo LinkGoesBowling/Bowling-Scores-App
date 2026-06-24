@@ -157,6 +157,8 @@ function addStrike(){
 		if (previousShot === 10 || previousShot !== 10){
 			console.log("Shot 22");
 			score += 10;
+			console.log(score);
+			endGame();
 			return;
 		}
 	}
