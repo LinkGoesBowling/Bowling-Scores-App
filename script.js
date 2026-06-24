@@ -208,6 +208,7 @@ function addStrike(){
 	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
+		return;
 	}
 function addSpare(){
 	spareButtonPressed = true;
