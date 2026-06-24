@@ -216,6 +216,15 @@ function addStrike(){
 function addSpare(){
 	spareButtonPressed = true;
 	spareButtonPressed = false;
+	if (shot === 22){
+		if (shot21Count === 10){
+			console.log("That's not a spare situation!");
+		}
+		else {
+			score += 10 - shot21Count;
+			endGame();
+		}
+	}
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 	if (strikeFollowedByPinCount === true){
 		console.log("Congrats! You got a spare.");
@@ -242,15 +251,6 @@ function addSpare(){
 	}
 	console.log("Score: " + score);
 	console.log(shot);
-	if (shot === 22){
-		if (shot21Count === 10){
-			console.log("That's not a spare situation!");
-		}
-		else {
-			score += 10 - shot21Count;
-			endGame();
-		}
-	}
 }
 function tenthFrame(shots){
 	if (shot21Completed === false){
