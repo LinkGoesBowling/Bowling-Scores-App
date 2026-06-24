@@ -153,6 +153,13 @@ function addPins(count){
 	console.log("Score: " + score);
 }
 function addStrike(){
+	if (shot === 22){
+		if (previousShot === 10 || previousShot !== 10){
+			console.log("Shot 22");
+			score += 10;
+			return;
+		}
+	}
 	strikeButtonPressed = true;
 	if (shot === 19 || shot === 20 || shot === 21){
 	tenthFrame(10);
@@ -196,12 +203,6 @@ function addStrike(){
 	}
 	if (previousShot === 10){
 		doubleStrike = true;
-	}
-	if (shot === 22){
-		if (previousShot === 10 || previousShot !== 10){
-			console.log("Shot 22");
-			score += 10;
-		}
 	}
 	console.log("Score: " + score);
 	previousShot = 10;
