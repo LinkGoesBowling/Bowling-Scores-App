@@ -197,13 +197,6 @@ function addStrike(){
 	if (previousShot === 10){
 		doubleStrike = true;
 	}
-	if (shot === 22 && shot21Completed === true){
-		console.log("Shot 22");
-		if (previousShot === 10 || shot21Count === "spare"){
-			console.log("Shot 22 executed")
-			score += 10;
-			endGame();
-		}
 		else if (previousShot !== 10 || shot21Count !== "spare") {
 			console.log("That's not a strike situation! Use the spare button instead.");
 		}
@@ -345,6 +338,13 @@ function tenthFrame(shots){
 	}
 	shot21Completed = true;
 	return;
+	}
+	if (shot === 22 && shot21Completed === true){
+		console.log("Shot 22");
+	if (previousShot === 10 || shot21Count === "spare"){
+		console.log("Shot 22 executed")
+		score += 10;
+		endGame();
 	}
 }
 //end of score calculator
