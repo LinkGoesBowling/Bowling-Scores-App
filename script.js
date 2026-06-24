@@ -96,6 +96,10 @@ function addPins(count){
 		}
 		previousShot = count;
 	}
+	else if (shot === 22){
+		console.log("Shot 22 executed");
+		score += count;
+	}
 	if (shot === 1){
 		shot1Count = count;
 	}
@@ -338,13 +342,6 @@ function tenthFrame(shots){
 	}
 	shot21Completed = true;
 	return;
-	}
-	if (shot === 22 && shot21Completed === true){
-		console.log("Shot 22");
-	if (previousShot === 10 || shot21Count === "spare"){
-		console.log("Shot 22 executed")
-		score += 10;
-		endGame();
 	}
 }
 //end of score calculator
