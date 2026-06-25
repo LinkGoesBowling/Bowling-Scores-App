@@ -248,7 +248,8 @@ function addSpare(){
 	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log("That's the first shot of the frame!");
 	}
-	else if (shot === 21) {
+	if (shot === 21) {
+		console.log("addSpare was executed");
 		if (previousShot === 10){
 			score += (10 - shot20Count) * 2;
 			shot21Count = "spare";
@@ -289,7 +290,7 @@ function tenthFrame(shots){
 		return;
 	}
 	if (shot === 21){
-		console.log("Shot 21");
+		console.log("tenthFrame executed");
 		if (doubleStrike === true && shot20Count === 10){
 			score += shots * 2;
 			console.log("Score: " + score);
