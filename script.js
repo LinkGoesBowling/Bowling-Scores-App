@@ -251,7 +251,7 @@ function addSpare(){
 			shot21Count = "spare";
 		}
 		else {
-			tenthFrame(10-shot21Count);
+			score += 10 - shot21Count;
 			shot21Count = "spare";
 		}
 	}
