@@ -27,3 +27,8 @@ img {
   height: 100px;
   display: block;
 }
+.restart-game {
+  text-align: center;
+  width: 300px;
+  height: 100px;
+}
