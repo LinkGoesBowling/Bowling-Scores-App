@@ -249,7 +249,6 @@ function addSpare(){
 		console.log("That's the first shot of the frame!");
 	}
 	if (shot === 21) {
-		console.log("addSpare was executed");
 		console.log("shot20Count: " + shot20Count);
 		if (previousShot === 10){
 			score += (10 - shot20Count) * 2;
@@ -291,7 +290,6 @@ function tenthFrame(shots){
 		return;
 	}
 	if (shot === 21){
-		console.log("tenthFrame executed");
 		if (doubleStrike === true && shot20Count === 10){
 			score += shots * 2;
 			console.log("Score: " + score);
