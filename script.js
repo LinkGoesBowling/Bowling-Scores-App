@@ -249,7 +249,6 @@ function addSpare(){
 		console.log("That's the first shot of the frame!");
 	}
 	if (shot === 21) {
-		console.log("shot20Count: " + shot20Count);
 		if (previousShot === 10){
 			score += (10 - shot20Count) * 2;
 			shot++;
