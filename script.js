@@ -359,6 +359,7 @@ function endGame(){
 	console.log("Final score: " + score);
 }
 function restartGame(){
+	console.log("The game has restarted");
 	doubleStrike = false;
 	previousShot = undefined;
 	score = 0;
