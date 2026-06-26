@@ -155,6 +155,9 @@ function addPins(count){
 	if (shot === 18){
 		shot18Count = count;
 	}
+	if (shot === 23){
+		endGame();
+	}
 	console.log("Score: " + score);
 }
 function addStrike(){
@@ -211,6 +214,9 @@ function addStrike(){
 	if (previousShot === 10){
 		doubleStrike = true;
 	}
+	if (shot === 23){
+		endGame();
+	}
 	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
@@ -259,6 +265,9 @@ function addSpare(){
 			shot++;
 			shot21Count = "spare";
 		}
+	}
+	if (shot === 23){
+		endGame();
 	}
 	console.log("Score: " + score);
 	console.log(shot);
