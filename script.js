@@ -330,14 +330,13 @@ function tenthFrame(shots){
 					score += shots;
 					console.log("Score: " + score);
 					shot21Count = shots;
-					endGame();
 				}
 				if (shot17Count === 10){
 					score += shots * 2;
 					console.log("Score: " + score);
 					shot21Count = shots;
-					endGame();
 				}
+				endGame();
 			}
 			if (shots > 10 - shot20Count){
 				score += 10 - shot20Count;
