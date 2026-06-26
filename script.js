@@ -155,10 +155,8 @@ function addPins(count){
 	if (shot === 18){
 		shot18Count = count;
 	}
-	if (shot === 23){
-		endGame();
-	}
 	console.log("Score: " + score);
+	endGame();
 }
 function addStrike(){
 	if (shot === 22){
@@ -214,12 +212,10 @@ function addStrike(){
 	if (previousShot === 10){
 		doubleStrike = true;
 	}
-	if (shot === 23){
-		endGame();
-	}
 	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
+	endGame();
 	return;
 }
 function addSpare(){
@@ -266,11 +262,9 @@ function addSpare(){
 			shot21Count = "spare";
 		}
 	}
-	if (shot === 23){
-		endGame();
-	}
 	console.log("Score: " + score);
 	console.log(shot);
+	endGame();
 }
 function tenthFrame(shots){
 	if (shot21Completed === false){
@@ -365,7 +359,9 @@ function tenthFrame(shots){
 }
 //end of score calculator
 function endGame(){
-	console.log("Final score: " + score);
+	if (shot === 23) {
+		console.log("Final score: " + score);
+	}
 }
 function restartGame(){
 	console.log("The game has restarted");
