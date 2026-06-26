@@ -211,7 +211,7 @@ function addStrike(){
 	}
 	}
 	else if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
-		console.log("It's the second shot! Click the spare button instead.");
+		addSpare();
 	}
 	if (previousShot === 10){
 		doubleStrike = true;
