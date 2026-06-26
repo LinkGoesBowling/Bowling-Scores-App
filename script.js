@@ -368,7 +368,7 @@ function tenthFrame(shots){
 function endGame(){
 	if (shot === 23) {
 		console.log("Final score: " + score);
-		score.push(allGames);
+		allGames.push(score);
 	}
 }
 function restartGame(){
