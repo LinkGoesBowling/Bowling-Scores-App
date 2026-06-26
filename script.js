@@ -41,7 +41,7 @@ function addPins(count){
 		if (previousShot === 10 || previousShot !== 10){ //this executes no matter what, but the script was executing addPins without a button press without this condition
 			console.log("Shot 22 executed");
 			score += count;
-			endGame();
+			shot = 23;
 			return;
 		}
 	}
@@ -163,7 +163,7 @@ function addStrike(){
 			console.log("Shot 22");
 			score += 10;
 			console.log(score);
-			endGame();
+			shot = 23;
 			return;
 		}
 	}
@@ -225,7 +225,7 @@ function addSpare(){
 		}
 		else {
 			score += 10 - shot21Count;
-			endGame();
+			shot = 23;
 		}
 	}
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
@@ -303,7 +303,7 @@ function tenthFrame(shots){
 			shot21Count = shots;
 			shot++;
 			if (shots < 10 - shot20Count){
-				endGame();
+				shot = 23;
 			}
 			return;
 		}
@@ -336,7 +336,7 @@ function tenthFrame(shots){
 					console.log("Score: " + score);
 					shot21Count = shots;
 				}
-				endGame();
+				shot = 23;
 			}
 			if (shots > 10 - shot20Count){
 				score += 10 - shot20Count;
@@ -356,8 +356,9 @@ function tenthFrame(shots){
 }
 //end of score calculator
 function endGame(){
-	shot++;
-	console.log("Final score: " + score);
+	if (shot === 23){
+		console.log("Final score: " + score);
+	}
 }
 function restartGame(){
 	console.log("The game has restarted");
