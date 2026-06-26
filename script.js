@@ -356,11 +356,13 @@ function tenthFrame(shots){
 	shot21Completed = true;
 	return;
 	}
+	endGame();
 }
 //end of score calculator
 function endGame(){
 	if (shot === 23) {
 		console.log("Final score: " + score);
+		score.push(allGames);
 	}
 }
 function restartGame(){
