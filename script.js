@@ -365,9 +365,7 @@ function tenthFrame(shots){
 }
 //end of score calculator
 function endGame(){
-	if (shot === 23){
-		console.log("Final score: " + score);
-	}
+	console.log("Final score: " + score);
 }
 function restartGame(){
 	console.log("The game has restarted");
