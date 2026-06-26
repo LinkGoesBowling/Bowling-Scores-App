@@ -371,6 +371,28 @@ function endGame(){
 	if (shot === 23) {
 		console.log("Final score: " + score);
 		allGames.push(score);
+		shot1Count = 0;
+		shot2Count = 0;
+		shot3Count = 0;
+		shot4Count = 0;
+		shot5Count = 0;
+		shot6Count = 0;
+		shot7Count = 0;
+		shot8Count = 0;
+		shot9Count = 0;
+		shot10Count = 0;
+		shot11Count = 0;
+		shot12Count = 0;
+		shot13Count = 0;
+		shot14Count = 0;
+		shot15Count = 0;
+		shot16Count = 0;
+		shot17Count = 0;
+		shot18Count = 0;
+		shot19Count = 0;
+		shot20Count = 0;
+		shot21Count = 0;
+		shot22Count = 0;
 	}
 }
 function restartGame(){
