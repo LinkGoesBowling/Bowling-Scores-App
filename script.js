@@ -1,7 +1,4 @@
 console.log("Programmed by Link Kelly (LinkGoesBowling)");
-let div = index.createElement('div');
-div.className = "alert";
-div.innerHTML = "<p>Test</p>";
 //start of score calculator
 let shot1Count = undefined;
 let shot2Count = undefined;
