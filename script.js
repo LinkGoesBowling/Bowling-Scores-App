@@ -34,6 +34,7 @@ let spareButtonPressed = false;
 let shot20Completed = false;
 let allGames = [];
 let shot21Completed = false;
+const element = document.getElementById("score");
 
 function addPins(count){
 	if (shot === 22){
@@ -159,6 +160,7 @@ function addPins(count){
 		endGame();
 	}
 	console.log("Score: " + score);
+	element.textContent = score;
 }
 function addStrike(){
 	if (shot === 22){
@@ -170,6 +172,7 @@ function addStrike(){
 			endGame();
 			return;
 		}
+		element.textContent = score;
 	}
 	strikeButtonPressed = true;
 	if (shot === 19 || shot === 20 || shot === 21){
@@ -221,6 +224,7 @@ function addStrike(){
 	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
+	element.textContent = score;
 	return;
 }
 function addSpare(){
@@ -270,6 +274,7 @@ function addSpare(){
 	}
 	console.log("Score: " + score);
 	console.log(shot);
+	element.textContent = score;
 }
 function tenthFrame(shots){
 	if (shot21Completed === false){
@@ -364,6 +369,7 @@ function tenthFrame(shots){
 	}
 	shot21Completed = true;
 	return;
+	element.textContent = score;
 	}
 }
 //end of score calculator
@@ -374,7 +380,6 @@ function endGame(){
 		calculateAverage();
 		shot++;
 		console.log("Press Restart Game to log a new game");
-		const element = document.getElementById("score");
 		element.textContent = score;
 	}
 }
