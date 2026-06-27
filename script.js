@@ -372,6 +372,10 @@ function endGame(){
 	if (shot === 23) {
 		console.log("Final score: " + score);
 		allGames.push(score);
+	}
+}
+function restartGame(){
+	console.log("The game has restarted");
 		shot1Count = undefined;
 		shot2Count = undefined;
 		shot3Count = undefined;
@@ -394,23 +398,15 @@ function endGame(){
 		shot20Count = undefined;
 		shot21Count = undefined;
 		shot22Count = undefined;
-  shot = 1;
-  score = 0;
-  previousShot = 0;
-  twoShotsAgo = 0;
-  doubleStrike = false;
-  strikeFollowedByPinCount = false;
-  isTenthFrame = false;
-  strikeButtonPressed = false;
-  spareButtonPressed = false;
-  shot20Completed = false;
-  shot21Completed = false;
-	}
-}
-function restartGame(){
-	console.log("The game has restarted");
-	doubleStrike = false;
-	previousShot = undefined;
-	score = 0;
-	shot = 1;
+  		shot = 1;
+		score = 0;
+  		previousShot = 0;
+  		twoShotsAgo = 0;
+  		doubleStrike = false;
+  		strikeFollowedByPinCount = false;
+  		isTenthFrame = false;
+  		strikeButtonPressed = false;
+  		spareButtonPressed = false;
+  		shot20Completed = false;
+  		shot21Completed = false;
 }
