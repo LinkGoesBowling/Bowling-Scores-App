@@ -1,5 +1,5 @@
 console.log("Programmed by Link Kelly (LinkGoesBowling)");
-document.createElement('div');
+let div = document.createElement('div');
 div.className = "alert";
 div.innerHTML = "<p>Test</p>";
 //start of score calculator
