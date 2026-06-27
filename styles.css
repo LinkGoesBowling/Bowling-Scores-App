@@ -26,7 +26,7 @@ img {
   width: 500px;
   height: 100px;
   display: block;
-  position: absolute;
+  position: absolute center;
 }
 .restart-game {
   text-align: center;
@@ -35,5 +35,5 @@ img {
 }
 .score {
   text-align: center;
-  position: absolute;
+  position: absolute center;
 }
