@@ -33,7 +33,6 @@ let strikeButtonPressed = false;
 let spareButtonPressed = false;
 let shot20Completed = false;
 let allGames = [];
-let sum = 0;
 let shot21Completed = false;
 
 function addPins(count){
@@ -412,9 +411,12 @@ function restartGame(){
   		shot21Completed = false;
 }
 function calculateAverage(){
+	let pinfallTotal = 0;
 	for (let i = 0; i < allGames.length; i++){
-		sum += allGames[i];
+		pinfallTotal += allGames[i];
 	}
-	let average = sum / allGames.length;
+	let average = pinfallTotal / allGames.length;
 	console.log("Average: " + average);
+	console.log("Games: " + allGames.length);
+	console.log("pinfallTotal: " + pinfallTotal);
 }
