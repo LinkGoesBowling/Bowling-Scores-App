@@ -374,6 +374,8 @@ function endGame(){
 		calculateAverage();
 		shot++;
 		console.log("Press Restart Game to log a new game");
+		document.getElementById("score");
+		score.textContent = score;
 	}
 }
 function restartGame(){
