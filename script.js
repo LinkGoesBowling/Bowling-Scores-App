@@ -159,8 +159,8 @@ function addPins(count){
 		endGame();
 	}
 	console.log("Score: " + score);
-	const element = document.getElementById("score");
-	element.textContent = score;
+	const changeScore = document.getElementById("score");
+	changeScore.textContent = score;
 }
 function addStrike(){
 	if (shot === 22){
@@ -225,8 +225,8 @@ function addStrike(){
 	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
-	const element = document.getElementById("score");
-	element.textContent = score;
+	const changeScore = document.getElementById("score");
+	changeScore.textContent = score;
 	return;
 }
 function addSpare(){
@@ -276,8 +276,8 @@ function addSpare(){
 	}
 	console.log("Score: " + score);
 	console.log(shot);
-	const element = document.getElementById("score");
-	element.textContent = score;
+	const changeScore = document.getElementById("score");
+	changeScore.textContent = score;
 }
 function tenthFrame(shots){
 	if (shot21Completed === false){
@@ -372,8 +372,8 @@ function tenthFrame(shots){
 	}
 	shot21Completed = true;
 	return;
-	const element = document.getElementById("score");
-	element.textContent = score;
+	const changeScore = document.getElementById("score");
+	changeScore.textContent = score;
 	}
 }
 //end of score calculator
@@ -385,12 +385,14 @@ function endGame(){
 		calculateAverage();
 		shot++;
 		console.log("Press Restart Game to log a new game");
-		const element = document.getElementById("score");
-		element.textContent = score;
+		const changeScore = document.getElementById("score");
+		changeScore.textContent = score;
 	}
 }
 function restartGame(){
 	console.log("The game has restarted");
+		const changeScore = document.getElementById("score");
+		changeScore.textContent = 0;
 		shot1Count = undefined;
 		shot2Count = undefined;
 		shot3Count = undefined;
