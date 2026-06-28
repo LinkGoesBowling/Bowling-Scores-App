@@ -35,6 +35,7 @@ let shot20Completed = false;
 let allGames = [];
 let shot21Completed = false;
 const getGamesFromLocalStorage = localStorage.getItem('allGames');
+var changeShot1 = document.getElementById("shot1");
 var changeShot2 = document.getElementById("shot2");
 var changeShot3 = document.getElementById("shot3");
 var changeShot4 = document.getElementById("shot4");
@@ -67,7 +68,6 @@ function addPins(count){
 	}
 	if (shot === 1){
 		shot1Count = count;
-		var changeShot1 = document.getElementById("shot1");
 		changeShot1.textContent = shot1Count;
 	}
 	if (shot === 2){
