@@ -35,6 +35,27 @@ let shot20Completed = false;
 let allGames = [];
 let shot21Completed = false;
 const getGamesFromLocalStorage = localStorage.getItem('allGames');
+var changeShot1 = document.getElementById("shot1");
+var changeShot2 = document.getElementById("shot2");
+var changeShot3 = document.getElementById("shot3");
+var changeShot4 = document.getElementById("shot4");
+var changeShot5 = document.getElementById("shot5");
+var changeShot6 = document.getElementById("shot6");
+var changeShot7 = document.getElementById("shot7");
+var changeShot8 = document.getElementById("shot8");
+var changeShot9 = document.getElementById("shot9");
+var changeShot10 = document.getElementById("shot10");
+var changeShot11 = document.getElementById("shot11");
+var changeShot12 = document.getElementById("shot12");
+var changeShot13 = document.getElementById("shot13");
+var changeShot14 = document.getElementById("shot14");
+var changeShot15 = document.getElementById("shot15");
+var changeShot16 = document.getElementById("shot16");
+var changeShot17 = document.getElementById("shot17");
+var changeShot18 = document.getElementById("shot18");
+var changeShot20 = document.getElementById("shot20");
+var changeShot21 = document.getElementById("shot21");
+var changeShot22 = document.getElementById("shot22");
 function addPins(count){
 	if (shot === 22){
 		if (previousShot === 10 || previousShot !== 10){ //this executes no matter what, but the script was executing addPins without a button press without this condition
