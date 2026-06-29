@@ -341,17 +341,17 @@ function addSpare(){
 		let changeShot12 = document.getElementById("shot12");
 		changeShot12.textContent = "/";
 	}
-	if (shot === 13){
-		let changeShot13 = document.getElementById("shot13");
-		changeShot13.textContent = "/";
+	if (shot === 14){
+		let changeShot14 = document.getElementById("shot14");
+		changeShot14.textContent = "/";
 	}
-	if (shot === 15){
-		let changeShot15 = document.getElementById("shot15");
-		changeShot15.textContent = "/";
+	if (shot === 16){
+		let changeShot16 = document.getElementById("shot16");
+		changeShot16.textContent = "/";
 	}
-	if (shot === 17){
-		let changeShot2 = document.getElementById("shot17");
-		changeShot17.textContent = "/";
+	if (shot === 18){
+		let changeShot18 = document.getElementById("shot18");
+		changeShot18.textContent = "/";
 	}
 	if (shot === 21 && shot20Count !== 10){
 		let changeShot21 = document.getElementById("shot21");
