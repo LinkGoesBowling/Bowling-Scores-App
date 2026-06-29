@@ -335,7 +335,7 @@ function addSpare(){
 	}
 	if (shot === 10){
 		let changeShot10 = document.getElementById("shot10");
-		changeShot2.textContent = "/";
+		changeShot10.textContent = "/";
 	}
 	if (shot === 12){
 		let changeShot12 = document.getElementById("shot12");
@@ -367,7 +367,7 @@ function addSpare(){
 			let changeShot22 = document.getElementById("shot2");
 			changeShot22.textContent = "/";
 			endGame();
-		} //if there is a bracket error, it's somewhere here
+		}
 	}
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 		if (strikeFollowedByPinCount === true){
