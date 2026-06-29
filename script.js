@@ -1,6 +1,6 @@
 console.log("Programmed by Link Kelly (LinkGoesBowling)");
 //start of score calculator
-//continue at line 366
+//continue at line 349
 let shot1Count = undefined;
 let shot2Count = undefined;
 let shot3Count = undefined;
@@ -335,17 +335,21 @@ function addSpare(){
 			shot++;
 			twoShotsAgo = previousShot;
 			previousShot = "spare";
-		}
+	}
 		else if (strikeFollowedByPinCount === false){
 			console.log("Congrats! You got a spare.");
 			shot++;
 			score += 10 - previousShot;
 			twoShotsAgo = previousShot;
 			previousShot = "spare";
-		}
 	}
+		if (shot === 2){
+			let changeShot2 = document.getElementById("shot2");
+			changeShot2.textContent = "/"
+		}
 		//continue here
-	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
+	}
+	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log("That's the first shot of the frame!");
 	}
 	if (shot === 21) {
