@@ -39,7 +39,6 @@ const getGamesFromLocalStorage = localStorage.getItem('allGames');
 function addPins(count){
 	if (shot === 22){
 		if (previousShot === 10 || previousShot !== 10){ //this executes no matter what, but the script was executing addPins without a button press without this condition
-			console.log("Shot 22 executed");
 			score += count;
 			shot++;
 			endGame();
@@ -151,7 +150,6 @@ function addPins(count){
 			console.log("You can't have more than 10 pins in a frame!");
 		}
 		else {
-			console.log(count + " pins added to score");
 			shot++;
 			previousShot = count;
 			if (twoShotsAgo !== 10) {
@@ -164,7 +162,6 @@ function addPins(count){
 		}
 	}
 	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17){
-		console.log(count + " pins added to score");
 		shot++;
 		if (previousShot === "spare"){
 			score += count;
@@ -195,16 +192,13 @@ function addPins(count){
 	if (shot === 23){
 		endGame();
 	}
-	console.log("Score: " + score);
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = score;
 }
 function addStrike(){
 	if (shot === 22){
 		if (previousShot === 10 || previousShot !== 10){
-			console.log("Shot 22");
 			score += 10;
-			console.log("Score: " + score);
 			shot++;
 			endGame();
 			return;
@@ -265,19 +259,16 @@ function addStrike(){
 	}
 	if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19 && shot !== 21){
 	if (previousShot === "spare"){
-		console.log("STRIIIIIIIKE!!!");
 		shot++;
 		shot++;
 		score += 20;
 	}
 	if (previousShot !== "spare" && previousShot !== 10) {
-		console.log("STRIIIIIIIKE!!!");
 		shot++;
 		shot++;
 		score += 10;
 	}
 	if (previousShot === 10 && doubleStrike === false){
-		console.log("STRIIIIIIIKE!!!");
 		score += 20;
 		shot++;
 		shot++;
@@ -289,7 +280,6 @@ function addStrike(){
 		shot++;
 		shot++;
 	}
-	console.log(shot);
 	if (shot === 17){
 		shot17Count = 10;
 	}
@@ -303,7 +293,6 @@ function addStrike(){
 	if (shot === 23){
 		endGame();
 	}
-	console.log("Score: " + score);
 	previousShot = 10;
 	strikeButtonPressed = false;
 	const changeScore = document.getElementById("score");
@@ -367,7 +356,6 @@ function addSpare(){
 	}
 	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
 		if (strikeFollowedByPinCount === true){
-			console.log("Congrats! You got a spare.");
 			score += (10 - previousShot) * 2;
 			strikeFollowedByPinCount = false;
 			shot++;
@@ -375,7 +363,6 @@ function addSpare(){
 			previousShot = "spare";
 	}
 		else if (strikeFollowedByPinCount === false){
-			console.log("Congrats! You got a spare.");
 			shot++;
 			score += 10 - previousShot;
 			twoShotsAgo = previousShot;
@@ -397,8 +384,6 @@ function addSpare(){
 			shot21Count = "spare";
 		}
 	}
-	console.log("Score: " + score);
-	console.log(shot);
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = score;
 }
@@ -416,7 +401,6 @@ function tenthFrame(shots){
 	} //continue here
 	if (shot === 20 && shot20Completed === false){
 		if (doubleStrike === true){
-			console.log("Shot 20");
 			score += shots * 3;
 			shot20Count = shots;
 			let changeShot20 = document.getElementById("shot20");
@@ -427,7 +411,6 @@ function tenthFrame(shots){
 			}
 		}
 		if (doubleStrike === false && previousShot !== 10 && previousShot !== "spare"){
-			console.log("Shot 20");
 			score += shots;
 			shot20Count = shots;
 			let changeShot20 = document.getElementById("shot20");
@@ -438,7 +421,6 @@ function tenthFrame(shots){
 			}
 		}
 		if (doubleStrike === false && previousShot === 10 || previousShot === "spare"){
-			console.log("Shot 20");
 			score += shots * 2;
 			shot20Count = shots;
 			let changeShot20 = document.getElementById("shot20");
@@ -457,7 +439,6 @@ function tenthFrame(shots){
 	if (shot === 21){
 		if (doubleStrike === true && shot20Count === 10){
 			score += shots * 2;
-			console.log("Score: " + score);
 			shot21Count = shots;
 			shot++;
 			let changeShot21 = document.getElementById("shot21");
@@ -469,7 +450,6 @@ function tenthFrame(shots){
 		}
 		if (doubleStrike === false && shot20Count === 10 || previousShot === "spare"){
 			score += shots;
-			console.log("Score: " + score);
 			shot21Count = shots;
 			shot++;
 			let changeShot21 = document.getElementById("shot21");
@@ -491,13 +471,11 @@ function tenthFrame(shots){
 			if (shots === 10 - shot20Count || spareButtonPressed === true){
 				if (shot17Count === 10){
 					score += shots;
-					console.log("Score: " + score);
 					shot21Count = "spare";
 					shot++;
 				}
 				if (shot17Count !== 10){
 					score += shots;
-					console.log("Score: " + score);
 					shot21Count = shots;
 					shot++;
 					let changeShot21 = document.getElementById("shot21");
@@ -511,7 +489,6 @@ function tenthFrame(shots){
 			if (shots < 10 - shot20Count){
 				if (shot17Count !== 10){
 					score += shots;
-					console.log("Score: " + score);
 					shot21Count = shots;
 					let changeShot21 = document.getElementById("shot21");
 					changeShot21.textContent = shots;
@@ -522,7 +499,6 @@ function tenthFrame(shots){
 				}
 				if (shot17Count === 10){
 					score += shots * 2;
-					console.log("Score: " + score);
 					shot21Count = shots;
 					let changeShot21 = document.getElementById("shot21");
 					changeShot21.textContent = shots;
@@ -557,18 +533,15 @@ function tenthFrame(shots){
 //end of score calculator
 function endGame(){
 	if (shot === 23) {
-		console.log("Final score: " + score);
 		allGames.push(score);
 		localStorage.setItem('allGames', allGames);
 		calculateAverage();
 		shot++;
-		console.log("Press Restart Game to log a new game");
 		const changeScore = document.getElementById("score");
 		changeScore.textContent = score;
 	}
 }
 function restartGame(){
-	console.log("The game has restarted");
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = 0;
 	shot1Count = undefined;
@@ -653,7 +626,4 @@ function calculateAverage(){
 		pinfallTotal += allGames[i];
 	}
 	let average = pinfallTotal / allGames.length;
-	console.log("Average: " + average);
-	console.log("Games: " + allGames.length);
-	console.log("pinfallTotal: " + pinfallTotal);
 }
