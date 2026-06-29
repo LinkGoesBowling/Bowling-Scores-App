@@ -343,29 +343,29 @@ function addSpare(){
 			twoShotsAgo = previousShot;
 			previousShot = "spare";
 	}
-		if (shot === 2){
+	}
+	if (shot === 2){
 			let changeShot2 = document.getElementById("shot2");
 			changeShot2.textContent = "/";
 			console.log("changeShot2 triggered"); //for testing purposes
 		}
-		if (shot === 4){
+	if (shot === 4){
 			let changeShot4 = document.getElementById("shot4");
 			changeShot4.textContent = "/";
 		}
-		if (shot === 6){
+	if (shot === 6){
 			let changeShot6 = document.getElementById("shot6");
 			changeShot6.textContent = "/";
 		}
-		if (shot === 8){
+	if (shot === 8){
 			let changeShot8 = document.getElementById("shot8");
 			changeShot8.textContent = "/";
 		}
-		if (shot === 10){
+	if (shot === 10){
 			let changeShot10 = document.getElementById("shot10");
 			changeShot10.textContent = "/";
 		}
 		//continue here
-	}
 	else if (shot === 1 || shot === 3 || shot === 5 || shot === 7 || shot === 9 || shot === 11 || shot === 13 || shot === 15 || shot === 17 || shot === 19){
 		console.log("That's the first shot of the frame!");
 	}
