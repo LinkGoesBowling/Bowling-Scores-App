@@ -275,7 +275,6 @@ function addStrike(){
 		twoShotsAgo = 10;
 	}
 	if (doubleStrike === true){
-		console.log("STRIIIIIIIKE!!!");
 		score += 30;
 		shot++;
 		shot++;
