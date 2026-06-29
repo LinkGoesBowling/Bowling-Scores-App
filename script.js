@@ -256,10 +256,6 @@ function addStrike(){
 		let changeShot21 = document.getElementById("shot21");
 		changeShot21.textContent = "X";
 	}
-	if (shot === 22){
-		let changeShot22 = document.getElementById("shot22");
-		changeShot22.textContent = "X";
-	}
 	strikeButtonPressed = true;
 	if (shot === 19 || shot === 20 || shot === 21 || shot === 22){
 	tenthFrame(10);
@@ -411,7 +407,7 @@ function tenthFrame(shots){
 		if (shot === 19){
 			shot++;
 		}
-		if (shot === 22 && shots === 10 && previousShot === "spare" || previousShot === 10){
+		if (shot === 22 && shots === 10 && shot21Count === "spare" || shot21Count === 10){
 		let changeShot22 = document.getElementById("shot22");
 		changeShot22.textContent = "X";
 	}
