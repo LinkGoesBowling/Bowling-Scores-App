@@ -418,6 +418,10 @@ function tenthFrame(shots){
 			shot20Count = shots;
 			let changeShot20 = document.getElementById("shot20");
 			changeShot20.textContent = shots;
+			if (shots === 10){
+				let changeShot20 = document.getElementById("shot20");
+				changeShot20.textContent = "X";
+			}
 		}
 		if (doubleStrike === false && previousShot !== 10 && previousShot !== "spare"){
 			console.log("Shot 20");
@@ -425,6 +429,10 @@ function tenthFrame(shots){
 			shot20Count = shots;
 			let changeShot20 = document.getElementById("shot20");
 			changeShot20.textContent = shots;
+			if (shots === 10){
+				let changeShot20 = document.getElementById("shot20");
+				changeShot20.textContent = "X";
+			}
 		}
 		if (doubleStrike === false && previousShot === 10 || previousShot === "spare"){
 			console.log("Shot 20");
@@ -432,6 +440,10 @@ function tenthFrame(shots){
 			shot20Count = shots;
 			let changeShot20 = document.getElementById("shot20");
 			changeShot20.textContent = shots;
+			if (shots === 10){
+				let changeShot20 = document.getElementById("shot20");
+				changeShot20.textContent = "X";
+			}
 		}
 		if (previousShot !== 10){
 			doubleStrike = false;
@@ -447,6 +459,10 @@ function tenthFrame(shots){
 			shot++;
 			let changeShot21 = document.getElementById("shot21");
 			changeShot21.textContent = shots;
+			if (shots === 10){
+				let changeShot21 = document.getElementById("shot21");
+				changeShot21.textContent = "X";
+			}
 		}
 		if (doubleStrike === false && shot20Count === 10 || previousShot === "spare"){
 			score += shots;
@@ -455,6 +471,10 @@ function tenthFrame(shots){
 			shot++;
 			let changeShot21 = document.getElementById("shot21");
 			changeShot21.textContent = shots;
+			if (shots === 10){
+				let changeShot21 = document.getElementById("shot21");
+				changeShot21.textContent = "X";
+			}
 			if (shots < 10 - shot20Count){
 				shot++;
 				endGame();
@@ -479,6 +499,10 @@ function tenthFrame(shots){
 					shot++;
 					let changeShot21 = document.getElementById("shot21");
 					changeShot21.textContent = shots;
+					if (shots === 10){
+						let changeShot21 = document.getElementById("shot21");
+						changeShot21.textContent = "X";
+					}
 				}
 			}
 			if (shots < 10 - shot20Count){
@@ -488,6 +512,10 @@ function tenthFrame(shots){
 					shot21Count = shots;
 					let changeShot21 = document.getElementById("shot21");
 					changeShot21.textContent = shots;
+					if (shots === 10){
+						let changeShot21 = document.getElementById("shot21");
+						changeShot21.textContent = "X";
+					}
 				}
 				if (shot17Count === 10){
 					score += shots * 2;
@@ -495,6 +523,10 @@ function tenthFrame(shots){
 					shot21Count = shots;
 					let changeShot21 = document.getElementById("shot21");
 					changeShot21.textContent = shots;
+					if (shots === 10){
+						let changeShot21 = document.getElementById("shot21");
+						changeShot21.textContent = "X";
+					}
 				}
 				shot++;
 				endGame();
@@ -607,7 +639,7 @@ function restartGame(){
 	resetShot18.textContent = " ";
 	let resetShot20 = document.getElementById("shot20");
 	resetShot20.textContent = " ";
-	let resetShot21= document.getElementById("shot21");
+	let resetShot21 = document.getElementById("shot21");
 	resetShot21.textContent = " ";
 	let resetShot22 = document.getElementById("shot22");
 	resetShot22.textContent = " ";
