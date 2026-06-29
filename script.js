@@ -532,14 +532,12 @@ function tenthFrame(shots){
 }
 //end of score calculator
 function endGame(){
-	if (shot === 23) {
-		allGames.push(score);
-		localStorage.setItem('allGames', allGames);
-		calculateAverage();
-		shot++;
-		const changeScore = document.getElementById("score");
-		changeScore.textContent = score;
-	}
+	allGames.push(score);
+	localStorage.setItem('allGames', allGames);
+	calculateAverage();
+	shot++;
+	const changeScore = document.getElementById("score");
+	changeScore.textContent = score;
 }
 function restartGame(){
 	const changeScore = document.getElementById("score");
