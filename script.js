@@ -40,6 +40,9 @@ function addPins(count){
 		if (previousShot === 10 || previousShot !== 10){ //this executes no matter what, but the script was executing addPins without a button press without this condition
 			score += count;
 			shot++;
+			shot22Count = count;
+			let changeShot22 = document.getElementById("shot22");
+			changeShot22.textContent = shot22Count;
 			endGame();
 			return;
 		}
