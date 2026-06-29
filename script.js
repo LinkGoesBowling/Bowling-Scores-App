@@ -387,7 +387,7 @@ function addSpare(){
 }
 function tenthFrame(shots){
 	if (shot21Completed === true){
-		if (shot === 22 && shots === 10 && shot21Count === "spare" || shot21Count === 10){
+		if (shot === 22 && shots === 10){
 		let changeShot22 = document.getElementById("shot22");
 		changeShot22.textContent = "X";
 	}
@@ -459,7 +459,7 @@ function tenthFrame(shots){
 				changeShot21.textContent = "X";
 			}
 			if (shots < 10 - shot20Count){
-				shot++;
+				shot = 23;
 				endGame();
 			}
 			return;
