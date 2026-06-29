@@ -346,6 +346,7 @@ function addSpare(){
 		if (shot === 2){
 			let changeShot2 = document.getElementById("shot2");
 			changeShot2.textContent = "/";
+			console.log("changeShot2 triggered"); //for testing purposes
 		}
 		if (shot === 4){
 			let changeShot4 = document.getElementById("shot4");
