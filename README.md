@@ -5,6 +5,23 @@
 <p>This project is open for anybody to use, modify, or build upon.</p>
 <h2>Website</h2>
 <p>The project is on this website: https://linkgoesbowling.github.io/Bowling-Scores-App/</p>
+<h2>Images of example scorecards from this program:</h2>
+<figure>
+  <img width="505" height="74" alt="{3ED58C81-BA20-4A89-886E-39D27FA0E266}" src="https://github.com/user-attachments/assets/4190e350-42b5-4aa9-9a69-c55b13ffa072" />
+  <figcaption>Perfect 300 game</figcaption>
+</figure>
+<figure>
+  <img width="504" height="77" alt="{F244A01C-B491-4949-9BA8-502BFD409548}" src="https://github.com/user-attachments/assets/e498f834-3081-4591-92aa-65a63983c95b" />
+  <figcaption>Dutch 200 (alternating strikes and spares)</figcaption>
+</figure>
+<figure>
+  <img width="506" height="73" alt="{6E554F05-D036-4943-A5DA-1E9AE29E3D75}" src="https://github.com/user-attachments/assets/1f1d092e-c15a-462e-be55-d4b52107049c" />
+  <figcaption>Random league game 1 (score: 203)</figcaption>
+</figure>
+<figure>
+  <img width="506" height="75" alt="{5E646660-2D22-47DF-B400-904042A1CD9D}" src="https://github.com/user-attachments/assets/8ff601f5-4fee-4a2e-a368-ec1a59a15a73" />
+  <figcaption>Random league game 2 (score: 224)</figcaption>
+</figure>
 <h2>Features</h2>
 <ul>
   <li>Calculates score from a scorecard</li>
