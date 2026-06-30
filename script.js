@@ -47,29 +47,6 @@ function addPins(count){
 			return;
 		}
 	}
-		if (shot === 19 || shot === 20 || shot === 21){
-			tenthFrame(count);
-		}
-	if (shot === 20){
-		shot20Count = count;
-	}
-	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
-		if (previousShot === 10 - count){
-			addSpare();
-			return;
-		}
-		if (previousShot > 10 - count){
-			console.log("You can't have more than 10 pins in a frame!");
-		}
-		else {
-			shot++;
-			previousShot = count;
-			if (twoShotsAgo !== 10) {
-				score += count;
-			}
-			if (twoShotsAgo === 10){
-			score += count * 2;
-		}
 			if (shot === 1){
 				shot1Count = count;
 				let changeShot1 = document.getElementById("shot1");
@@ -83,7 +60,7 @@ function addPins(count){
 				let changeShot2 = document.getElementById("shot2");
 				changeShot2.textContent = shot2Count;
 				changeFrame1.textContent = score;
-				changeFrame1.style.color = #000000;
+				changeFrame1.style.color = 'black';
 			}
 			if (shot === 3){
 				shot3Count = count;
@@ -165,6 +142,29 @@ function addPins(count){
 				let changeShot18 = document.getElementById("shot18");
 				changeShot18.textContent = shot18Count;
 			}
+		if (shot === 19 || shot === 20 || shot === 21){
+			tenthFrame(count);
+		}
+	if (shot === 20){
+		shot20Count = count;
+	}
+	if (shot === 2 || shot === 4 || shot === 6 || shot === 8 || shot === 10 || shot === 12 || shot === 14 || shot === 16 || shot === 18){
+		if (previousShot === 10 - count){
+			addSpare();
+			return;
+		}
+		if (previousShot > 10 - count){
+			console.log("You can't have more than 10 pins in a frame!");
+		}
+		else {
+			shot++;
+			previousShot = count;
+			if (twoShotsAgo !== 10) {
+				score += count;
+			}
+			if (twoShotsAgo === 10){
+			score += count * 2;
+		}
 		strikeFollowedByPinCount = false;
 		}
 	}
