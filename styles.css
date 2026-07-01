@@ -238,3 +238,9 @@ img {
   top: 73.5%;
   left: 67%;
 }
+.sidenav{
+  height: 100%;
+  width: 100px;
+  top: 0;
+  left: 0;
+}
