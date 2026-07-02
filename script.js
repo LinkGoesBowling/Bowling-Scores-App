@@ -197,33 +197,7 @@ function addPins(count){
 	}
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = score;
-	if (shot === 1 || shot === 2){
-		changeFrame(1);
-	}
-	if (shot === 3 || shot === 4){
-		changeFrame(2);
-	}
-	if (shot === 5 || shot === 6){
-		changeFrame(3);
-	}
-	if (shot === 7 || shot === 8){
-		changeFrame(4);
-	}
-	if (shot === 9 || shot === 10){
-		changeFrame(5);
-	}
-	if (shot === 11 || shot === 12){
-		changeFrame(6);
-	}
-	if (shot === 13 || shot === 14){
-		changeFrame(7);
-	}
-	if (shot === 15 || shot === 16){
-		changeFrame(8);
-	}
-	if (shot === 17 || shot === 18){
-		changeFrame(9);
-	}
+	changeFrame();
 }
 function addStrike(){
 	if (shot === 22){
@@ -563,40 +537,40 @@ function tenthFrame(shots){
 	changeScore.textContent = score;
 	}
 }
-function changeFrame(frame){
-	if (frame === 1){
+function changeFrame(){
+	if (shot === 1 || shot === 2){
 		let changeFrame1 = document.getElementById("frame1score");
 		changeFrame1.textContent = score;
 	}
-	if (frame === 2){
+	if (shot === 3 || shot === 4){
 		let changeFrame2 = document.getElementById("frame2score");
 		changeFrame2.textContent = score;
 	}
-	if (frame === 3){
+	if (shot === 5 || shot === 6){
 		let changeFrame3 = document.getElementById("frame3score");
 		changeFrame3.textContent = score;
 	}
-	if (frame === 4){
+	if (shot === 7 || shot === 8){
 		let changeFrame4 = document.getElementById("frame4score");
 		changeFrame4.textContent = score;
 	}
-	if (frame === 5){
+	if (shot === 9 || shot === 10){
 		let changeFrame5 = document.getElementById("frame5score");
 		changeFrame5.textContent = score;
 	}
-	if (frame === 6){
+	if (shot === 11 || shot === 12){
 		let changeFrame6 = document.getElementById("frame6score");
 		changeFrame6.textContent = score;
 	}
-	if (frame === 7){
+	if (shot === 13 || shot === 14){
 		let changeFrame7 = document.getElementById("frame7score");
 		changeFrame7.textContent = score;
 	}
-	if (frame === 8){
+	if (shot === 15 || shot === 16){
 		let changeFrame8 = document.getElementById("frame8score");
 		changeFrame8.textContent = score;
 	}
-	if (frame === 9){
+	if (shot === 17 || shot === 18){
 		let changeFrame9 = document.getElementById("frame9score");
 		changeFrame9.textContent = score;
 	}
@@ -688,6 +662,24 @@ function restartGame(){
 	reset10Frame1.textContent = " ";
 	let reset10Frame2 = document.getElementById("frame10box2");
 	reset10Frame2.textContent = " ";
+	let resetFrame1Score = document.getElementById("frame1score");
+	resetFrame1Score.textContent = " ";
+	let resetFrame2Score = document.getElementById("frame2score");
+	resetFrame2Score.textContent = " ";
+	let resetFrame3Score = document.getElementById("frame3score");
+	resetFrame3Score.textContent = " ";
+	let resetFrame4Score = document.getElementById("frame4score");
+	resetFrame4Score.textContent = " ";
+	let resetFrame5Score = document.getElementById("frame5score");
+	resetFrame5Score.textContent = " ";
+	let resetFrame6Score = document.getElementById("frame6score");
+	resetFrame6Score.textContent = " ";
+	let resetFrame7Score = document.getElementById("frame7score");
+	resetFrame7Score.textContent = " ";
+	let resetFrame8Score = document.getElementById("frame8score");
+	resetFrame8Score.textContent = " ";
+	let resetFrame9Score = document.getElementById("frame9score");
+	resetFrame9Score.textContent = " ";
 }
 function calculateAverage(){
 	let pinfallTotal = 0;
