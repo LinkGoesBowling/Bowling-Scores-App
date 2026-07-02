@@ -41,7 +41,7 @@ function addPins(count){
 			score += count;
 			shot++;
 			shot22Count = count;
-			let changeShot22 = document.getElementById("shot22");
+			let changeShot22 = document.getElementById("frame10box2");
 			changeShot22.textContent = shot22Count;
 			endGame();
 			return;
@@ -55,7 +55,7 @@ function addPins(count){
 			}
 			if (shot === 2){
 				shot2Count = count;
-				let changeShot2 = document.getElementById("shot2");
+				let changeShot2 = document.getElementById("frame1box");
 				changeShot2.textContent = shot2Count;
 			}
 			if (shot === 3){
@@ -65,7 +65,7 @@ function addPins(count){
 			}
 			if (shot === 4){
 				shot4Count = count;
-				let changeShot4 = document.getElementById("shot4");
+				let changeShot4 = document.getElementById("frame2box");
 				changeShot4.textContent = shot4Count;
 			}
 			if (shot === 5){
@@ -75,7 +75,7 @@ function addPins(count){
 			}
 			if (shot === 6){
 				shot6Count = count;
-				let changeShot6 = document.getElementById("shot6");
+				let changeShot6 = document.getElementById("frame3box");
 				changeShot6.textContent = shot6Count;
 			}
 			if (shot === 7){
@@ -85,7 +85,7 @@ function addPins(count){
 			}
 			if (shot === 8){
 				shot8Count = count;
-				let changeShot8 = document.getElementById("shot8");
+				let changeShot8 = document.getElementById("frame4box");
 				changeShot8.textContent = shot8Count;
 			}
 			if (shot === 9){
@@ -95,7 +95,7 @@ function addPins(count){
 			}
 			if(shot === 10){
 				shot10Count = count;
-				let changeShot10 = document.getElementById("shot10");
+				let changeShot10 = document.getElementById("frame5box");
 				changeShot10.textContent = shot10Count;
 			}
 			if (shot === 11){
@@ -105,7 +105,7 @@ function addPins(count){
 			}
 			if (shot === 12) {
 				shot12Count = count;
-				let changeShot12 = document.getElementById("shot12");
+				let changeShot12 = document.getElementById("frame6box");
 				changeShot12.textContent = shot12Count;
 			}
 			if (shot === 13){
@@ -115,7 +115,7 @@ function addPins(count){
 			}
 			if (shot === 14){
 				shot14Count = count;
-				let changeShot14 = document.getElementById("shot14");
+				let changeShot14 = document.getElementById("frame7box");
 				changeShot14.textContent = shot14Count;
 			}
 			if (shot === 15){
@@ -125,7 +125,7 @@ function addPins(count){
 			}
 			if (shot === 16){
 				shot16Count = count;
-				let changeShot16 = document.getElementById("shot16");
+				let changeShot16 = document.getElementById("frame8box");
 				changeShot16.textContent = shot16Count;
 			}
 			if (shot === 17){
@@ -135,7 +135,7 @@ function addPins(count){
 			}
 			if (shot === 18){
 				shot18Count = count;
-				let changeShot18 = document.getElementById("shot18");
+				let changeShot18 = document.getElementById("frame9box");
 				changeShot18.textContent = shot18Count;
 			}
 		if (shot === 19 || shot === 20 || shot === 21){
@@ -203,7 +203,7 @@ function addStrike(){
 		if (previousShot === 10 || previousShot !== 10){
 			score += 10;
 			shot++;
-			let changeShot22 = document.getElementById("shot22");
+			let changeShot22 = document.getElementById("frame10box2");
 			changeShot22.textContent = "X";
 			endGame();
 			return;
@@ -212,47 +212,47 @@ function addStrike(){
 		changeScore.textContent = score;
 	}
 	if (shot === 1){
-	let changeShot2 = document.getElementById("shot2");
+	let changeShot2 = document.getElementById("frame1box");
 	changeShot2.textContent = "X";
 	}
 	if (shot === 3){
-		let changeShot4 = document.getElementById("shot4");
+		let changeShot4 = document.getElementById("frame2box");
 		changeShot4.textContent = "X";
 	}
 	if (shot === 5){
-		let changeShot6 = document.getElementById("shot6");
+		let changeShot6 = document.getElementById("frame3box");
 		changeShot6.textContent = "X";
 	}
 	if (shot === 7){
-		let changeShot8 = document.getElementById("shot8");
+		let changeShot8 = document.getElementById("frame4box");
 		changeShot8.textContent = "X";
 	}
 	if (shot === 9){
-		let changeShot10 = document.getElementById("shot10");
+		let changeShot10 = document.getElementById("frame5box");
 		changeShot10.textContent = "X";
 	}
 	if (shot === 11){
-		let changeShot12 = document.getElementById("shot12");
+		let changeShot12 = document.getElementById("frame6box");
 		changeShot12.textContent = "X";
 	}
 	if (shot === 13){
-		let changeShot14 = document.getElementById("shot14");
+		let changeShot14 = document.getElementById("frame7box");
 		changeShot14.textContent = "X";
 	}
 	if (shot === 15){
-		let changeShot16 = document.getElementById("shot16");
+		let changeShot16 = document.getElementById("frame8box");
 		changeShot16.textContent = "X";
 	}
 	if (shot === 17){
-		let changeShot18 = document.getElementById("shot18");
+		let changeShot18 = document.getElementById("frame9box");
 		changeShot18.textContent = "X";
 	}
 	if (shot === 20){
-		let changeShot20 = document.getElementById("shot20");
+		let changeShot20 = document.getElementById("shot10");
 		changeShot20.textContent = "X";
 	}
 	if (shot === 21 && shot20Count === 10){
-		let changeShot21 = document.getElementById("shot21");
+		let changeShot21 = document.getElementById("frame10box1");
 		changeShot21.textContent = "X";
 	}
 	strikeButtonPressed = true;
@@ -307,43 +307,43 @@ function addSpare(){
 	spareButtonPressed = true;
 	spareButtonPressed = false;
 	if (shot === 2){
-		let changeShot2 = document.getElementById("shot2");
+		let changeShot2 = document.getElementById("frame1box");
 		changeShot2.textContent = "/";
 	}
 	if (shot === 4){
-		let changeShot4 = document.getElementById("shot4");
+		let changeShot4 = document.getElementById("frame2box");
 		changeShot4.textContent = "/";
 	}
 	if (shot === 6){
-		let changeShot6 = document.getElementById("shot6");
+		let changeShot6 = document.getElementById("frame3box");
 		changeShot6.textContent = "/";
 	}
 	if (shot === 8){
-		let changeShot8 = document.getElementById("shot8");
+		let changeShot8 = document.getElementById("frame4box");
 		changeShot8.textContent = "/";
 	}
 	if (shot === 10){
-		let changeShot10 = document.getElementById("shot10");
+		let changeShot10 = document.getElementById("frame5box");
 		changeShot10.textContent = "/";
 	}
 	if (shot === 12){
-		let changeShot12 = document.getElementById("shot12");
+		let changeShot12 = document.getElementById("frame6box");
 		changeShot12.textContent = "/";
 	}
 	if (shot === 14){
-		let changeShot14 = document.getElementById("shot14");
+		let changeShot14 = document.getElementById("frame7box");
 		changeShot14.textContent = "/";
 	}
 	if (shot === 16){
-		let changeShot16 = document.getElementById("shot16");
+		let changeShot16 = document.getElementById("frame8box");
 		changeShot16.textContent = "/";
 	}
 	if (shot === 18){
-		let changeShot18 = document.getElementById("shot18");
+		let changeShot18 = document.getElementById("frame9box");
 		changeShot18.textContent = "/";
 	}
 	if (shot === 21 && shot20Count !== 10){
-		let changeShot21 = document.getElementById("shot21");
+		let changeShot21 = document.getElementById("frame10box1");
 		changeShot21.textContent = "/";
 	}
 	if (shot === 22){
@@ -353,7 +353,7 @@ function addSpare(){
 		else {
 			score += 10 - shot21Count;
 			shot++;
-			let changeShot22 = document.getElementById("shot22");
+			let changeShot22 = document.getElementById("frame10box2");
 			changeShot22.textContent = "/";
 			endGame();
 		}
@@ -394,7 +394,7 @@ function addSpare(){
 function tenthFrame(shots){
 	if (shot21Completed === true){
 		if (shot === 22 && shots === 10){
-		let changeShot22 = document.getElementById("shot22");
+		let changeShot22 = document.getElementById("frame10box2");
 		changeShot22.textContent = "X";
 	}
 	if (shot === 22 && shots !== 10){
@@ -409,30 +409,30 @@ function tenthFrame(shots){
 		if (doubleStrike === true){
 			score += shots * 3;
 			shot20Count = shots;
-			let changeShot20 = document.getElementById("shot20");
+			let changeShot20 = document.getElementById("shot10");
 			changeShot20.textContent = shots;
 			if (shots === 10){
-				let changeShot20 = document.getElementById("shot20");
+				let changeShot20 = document.getElementById("shot10");
 				changeShot20.textContent = "X";
 			}
 		}
 		if (doubleStrike === false && previousShot !== 10 && previousShot !== "spare"){
 			score += shots;
 			shot20Count = shots;
-			let changeShot20 = document.getElementById("shot20");
+			let changeShot20 = document.getElementById("shot10");
 			changeShot20.textContent = shots;
 			if (shots === 10){
-				let changeShot20 = document.getElementById("shot20");
+				let changeShot20 = document.getElementById("shot10");
 				changeShot20.textContent = "X";
 			}
 		}
 		if (doubleStrike === false && previousShot === 10 || previousShot === "spare"){
 			score += shots * 2;
 			shot20Count = shots;
-			let changeShot20 = document.getElementById("shot20");
+			let changeShot20 = document.getElementById("shot10");
 			changeShot20.textContent = shots;
 			if (shots === 10){
-				let changeShot20 = document.getElementById("shot20");
+				let changeShot20 = document.getElementById("shot10");
 				changeShot20.textContent = "X";
 			}
 		}
@@ -447,10 +447,10 @@ function tenthFrame(shots){
 			score += shots * 2;
 			shot21Count = shots;
 			shot++;
-			let changeShot21 = document.getElementById("shot21");
+			let changeShot21 = document.getElementById("frame10box1");
 			changeShot21.textContent = shots;
 			if (shots === 10){
-				let changeShot21 = document.getElementById("shot21");
+				let changeShot21 = document.getElementById("frame10box1");
 				changeShot21.textContent = "X";
 			}
 		}
@@ -458,10 +458,10 @@ function tenthFrame(shots){
 			score += shots;
 			shot21Count = shots;
 			shot++;
-			let changeShot21 = document.getElementById("shot21");
+			let changeShot21 = document.getElementById("frame10box1");
 			changeShot21.textContent = shots;
 			if (shots === 10){
-				let changeShot21 = document.getElementById("shot21");
+				let changeShot21 = document.getElementById("frame10box1");
 				changeShot21.textContent = "X";
 			}
 			if (shots < 10 - shot20Count){
@@ -484,10 +484,10 @@ function tenthFrame(shots){
 					score += shots;
 					shot21Count = shots;
 					shot++;
-					let changeShot21 = document.getElementById("shot21");
+					let changeShot21 = document.getElementById("frame10box1");
 					changeShot21.textContent = shots;
 					if (shots === 10){
-						let changeShot21 = document.getElementById("shot21");
+						let changeShot21 = document.getElementById("frame10box1");
 						changeShot21.textContent = "X";
 					}
 				}
@@ -496,20 +496,20 @@ function tenthFrame(shots){
 				if (shot17Count !== 10){
 					score += shots;
 					shot21Count = shots;
-					let changeShot21 = document.getElementById("shot21");
+					let changeShot21 = document.getElementById("frame10box1");
 					changeShot21.textContent = shots;
 					if (shots === 10){
-						let changeShot21 = document.getElementById("shot21");
+						let changeShot21 = document.getElementById("frame10box1");
 						changeShot21.textContent = "X";
 					}
 				}
 				if (shot17Count === 10){
 					score += shots * 2;
 					shot21Count = shots;
-					let changeShot21 = document.getElementById("shot21");
+					let changeShot21 = document.getElementById("frame10box1");
 					changeShot21.textContent = shots;
 					if (shots === 10){
-						let changeShot21 = document.getElementById("shot21");
+						let changeShot21 = document.getElementById("frame10box1");
 						changeShot21.textContent = "X";
 					}
 				}
@@ -583,45 +583,45 @@ function restartGame(){
   	shot21Completed = false;
 	let resetShot1 = document.getElementById("shot1");
 	resetShot1.textContent = " ";
-	let resetShot2 = document.getElementById("shot2");
+	let resetShot2 = document.getElementById("frame1box");
 	resetShot2.textContent = " ";
 	let resetShot3 = document.getElementById("shot3");
 	resetShot3.textContent = " ";
-	let resetShot4 = document.getElementById("shot4");
+	let resetShot4 = document.getElementById("frame2box");
 	resetShot4.textContent = " ";
 	let resetShot5 = document.getElementById("shot5");
 	resetShot5.textContent = " ";
-	let resetShot6 = document.getElementById("shot6");
+	let resetShot6 = document.getElementById("frame3box");
 	resetShot6.textContent = " ";
 	let resetShot7 = document.getElementById("shot7");
 	resetShot7.textContent = " ";
-	let resetShot8 = document.getElementById("shot8");
+	let resetShot8 = document.getElementById("frame4box");
 	resetShot8.textContent = " ";
 	let resetShot9 = document.getElementById("shot9");
 	resetShot9.textContent = " ";
-	let resetShot10 = document.getElementById("shot10");
+	let resetShot10 = document.getElementById("frame5box");
 	resetShot10.textContent = " ";
 	let resetShot11 = document.getElementById("shot11");
 	resetShot11.textContent = " ";
-	let resetShot12 = document.getElementById("shot12");
+	let resetShot12 = document.getElementById("frame6box");
 	resetShot12.textContent = " ";
 	let resetShot13 = document.getElementById("shot13");
 	resetShot13.textContent = " ";
-	let resetShot14 = document.getElementById("shot14");
+	let resetShot14 = document.getElementById("frame7box");
 	resetShot14.textContent = " ";
 	let resetShot15 = document.getElementById("shot15");
 	resetShot15.textContent = " ";
-	let resetShot16 = document.getElementById("shot16");
+	let resetShot16 = document.getElementById("frame8box");
 	resetShot16.textContent = " ";
 	let resetShot17 = document.getElementById("shot17");
 	resetShot17.textContent = " ";
-	let resetShot18 = document.getElementById("shot18");
+	let resetShot18 = document.getElementById("frame9box");
 	resetShot18.textContent = " ";
-	let resetShot20 = document.getElementById("shot20");
+	let resetShot20 = document.getElementById("shot10");
 	resetShot20.textContent = " ";
-	let resetShot21 = document.getElementById("shot21");
+	let resetShot21 = document.getElementById("frame10box1");
 	resetShot21.textContent = " ";
-	let resetShot22 = document.getElementById("shot22");
+	let resetShot22 = document.getElementById("frame10box2");
 	resetShot22.textContent = " ";
 }
 function calculateAverage(){
