@@ -210,8 +210,6 @@ body {
   width: 17px;
 }
 .frame1{
-  /* top: 100%;
-  left: 0; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -226,12 +224,8 @@ body {
   height: 50px;
   width: 40px;
   border: 2px solid black;
-  /* left: 43px;
-  bottom: 54px; */
 }
 .frame3{
-  /* bottom: 108px;
-  left: 87px; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -240,8 +234,6 @@ body {
   border: 2px solid black;
 }
 .frame4{
-  /* bottom: 162px;
-  left: 130px; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -250,8 +242,6 @@ body {
   border: 2px solid black;
 }
 .frame5{
-  /* bottom: 216px;
-  left: 173px; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -262,8 +252,6 @@ body {
 .frame6{
   text-align: center;
   position: relative;
-  /* bottom: 270px;
-  left: 216px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -272,8 +260,6 @@ body {
 .frame7{
   text-align: center;
   position: relative;
-  /* bottom: 324px;
-  left: 260px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -282,8 +268,6 @@ body {
 .frame8{
   text-align: center;
   position: relative;
-  /* bottom: 378px;
-  left: 304px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -292,8 +276,6 @@ body {
 .frame9{
   text-align: center;
   position: relative;
-  /* bottom: 432px;
-  left: 348px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -302,8 +284,6 @@ body {
 .frame10{
   text-align: center;
   position: relative;
-  /* bottom: 486px;
-  left: 392px; */
   background-color: white;
   height: 50px;
   width: 70px;
@@ -336,7 +316,6 @@ body {
   left: 0;
   background-color: gray;
 }
-/*  */
 .scoresheet {
   display: flex;
   flex-direction: row;
