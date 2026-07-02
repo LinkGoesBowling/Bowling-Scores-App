@@ -548,39 +548,39 @@ function tenthFrame(shots){
 	}
 }
 function changeFrame(){
-	if (shot === 1 || shot === 3){
+	if (shot === 2 || shot === 3){
 		let changeFrame1 = document.getElementById("frame1score");
 		changeFrame1.textContent = score;
 	}
-	if (shot === 4){
+	if (shot === 4 || shot === 5){
 		let changeFrame2 = document.getElementById("frame2score");
 		changeFrame2.textContent = score;
 	}
-	if (shot === 5 || shot === 6){
+	if (shot === 7 || shot === 6){
 		let changeFrame3 = document.getElementById("frame3score");
 		changeFrame3.textContent = score;
 	}
-	if (shot === 7 || shot === 8){
+	if (shot === 9 || shot === 8){
 		let changeFrame4 = document.getElementById("frame4score");
 		changeFrame4.textContent = score;
 	}
-	if (shot === 9 || shot === 10){
+	if (shot === 11 || shot === 10){
 		let changeFrame5 = document.getElementById("frame5score");
 		changeFrame5.textContent = score;
 	}
-	if (shot === 11 || shot === 12){
+	if (shot === 13 || shot === 12){
 		let changeFrame6 = document.getElementById("frame6score");
 		changeFrame6.textContent = score;
 	}
-	if (shot === 13 || shot === 14){
+	if (shot === 15 || shot === 14){
 		let changeFrame7 = document.getElementById("frame7score");
 		changeFrame7.textContent = score;
 	}
-	if (shot === 15 || shot === 16){
+	if (shot === 17 || shot === 16){
 		let changeFrame8 = document.getElementById("frame8score");
 		changeFrame8.textContent = score;
 	}
-	if (shot === 17 || shot === 18){
+	if (shot === 19 || shot === 18){
 		let changeFrame9 = document.getElementById("frame9score");
 		changeFrame9.textContent = score;
 	}
