@@ -219,8 +219,6 @@ function addStrike(){
 			endGame();
 			return;
 		}
-		const changeScore = document.getElementById("score");
-		changeScore.textContent = score;
 	}
 	if (shot === 1){
 	let changeShot2 = document.getElementById("frame1box");
@@ -324,7 +322,7 @@ function addStrike(){
 		}
 		if (previousShot === 10){
 			let changeFrame1 = document.getElementById("frame1score");
-			changeFrame1.textContent = 30;
+			changeFrame1.textContent = 20;
 		}
 	}
 	if (shot === 6 || shot === 7){
@@ -349,6 +347,8 @@ function addStrike(){
 		changeFrame(9);
 	}
 	return;
+	let changeScore = document.getElementById("score");
+	changeScore.textContent = score;
 }
 function addSpare(){
 	spareButtonPressed = true;
