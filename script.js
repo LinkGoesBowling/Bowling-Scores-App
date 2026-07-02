@@ -130,7 +130,7 @@ function addPins(count){
 			}
 			if (shot === 17){
 				shot17Count = count;
-				let changeShot17 = document.getElementById("shot8");
+				let changeShot17 = document.getElementById("shot9");
 				changeShot17.textContent = shot17Count;
 			}
 			if (shot === 18){
