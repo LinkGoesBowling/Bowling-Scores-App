@@ -193,15 +193,23 @@ img {
   top: 58%;
   left: 69%;
 }
-.frame1box{
+.frameboxes{
   text-align: center;
   position: absolute;
-  bottom: 285px;
-  left: 25px;
+  bottom: 29px;
+  left: 21px;
   height: 20px;
   width: 17px;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
+}
+.shots{
+  text-align: center;
+  position: absolute;
+  top: 1px;
+  left: 7px;
+  height: 20px;
+  width: 17px;
 }
 .frame1{
   top: 100%;
@@ -223,16 +231,6 @@ img {
   left: 43px;
   bottom: 54px;
 }
-.frame2box{
-  text-align: center;
-  position: absolute;
-  bottom: 285px;
-  left: 68px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-}
 .frame3{
   bottom: 108px;
   left: 87px;
@@ -242,16 +240,6 @@ img {
   height: 50px;
   width: 40px;
   border: 2px solid black;
-}
-.frame3box{
-  text-align: center;
-  position: absolute;
-  bottom: 285px;
-  left: 110px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
 }
 .frame4{
   bottom: 162px;
@@ -263,16 +251,6 @@ img {
   width: 40px;
   border: 2px solid black;
 }
-.frame4box{
-  text-align: center;
-  position: absolute;
-  bottom: 285px;
-  left: 153px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-}
 .frame5{
   bottom: 216px;
   left: 173px;
@@ -282,16 +260,6 @@ img {
   height: 50px;
   width: 40px;
   border: 2px solid black;
-}
-.frame5box{
-  text-align: center;
-  position: absolute;
-  bottom: 285px;
-  left: 198px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
 }
 .frame6{
   text-align: center;
@@ -303,16 +271,6 @@ img {
   width: 40px;
   border: 2px solid black;
 }
-.frame6box{
-  text-align: center;
-  position: absolute;
-  bottom: 285px;
-  left: 240px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-}
 .frame7{
   text-align: center;
   position: relative;
@@ -322,16 +280,6 @@ img {
   height: 50px;
   width: 40px;
   border: 2px solid black;
-}
-.frame7box{
-  position: absolute;
-  text-align: center;
-  bottom: 285px;
-  left: 285px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
 }
 .frame8{
   text-align: center;
@@ -343,16 +291,6 @@ img {
   width: 40px;
   border: 2px solid black;
 }
-.frame8box{
-  text-align: center;
-  position: absolute;
-  bottom: 285px;
-  left: 328px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-}
 .frame9{
   text-align: center;
   position: relative;
@@ -363,20 +301,10 @@ img {
   width: 40px;
   border: 2px solid black;
 }
-.frame9box{
-  text-align: center;
-  position: relative;
-  bottom: 485px;
-  left: 373px;
-  height: 20px;
-  width: 17px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-}
 .frame10{
   text-align: center;
   position: relative;
-  bottom: 508px;
+  bottom: 486px;
   left: 392px;
   background-color: white;
   height: 50px;
@@ -388,8 +316,8 @@ img {
   position: absolute;
   height: 20px;
   width: 17px;
-  bottom: 285px;
-  left: 426px;
+  bottom: 30px;
+  left: 32px;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
 }
@@ -398,8 +326,8 @@ img {
   position: absolute;
   height: 20px;
   width: 17px;
-  bottom: 285px;
-  left: 445px;
+  bottom: 30px;
+  left: 51px;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
 }
