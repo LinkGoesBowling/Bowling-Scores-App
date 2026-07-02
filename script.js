@@ -312,6 +312,7 @@ function addStrike(){
 	strikeButtonPressed = false;
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = score;
+	changeFrame();
 	return;
 }
 function addSpare(){
@@ -401,6 +402,7 @@ function addSpare(){
 	}
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = score;
+	changeFrame();
 }
 function tenthFrame(shots){
 	if (shot21Completed === true){
