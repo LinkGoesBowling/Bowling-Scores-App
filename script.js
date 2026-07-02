@@ -312,7 +312,38 @@ function addStrike(){
 	strikeButtonPressed = false;
 	const changeScore = document.getElementById("score");
 	changeScore.textContent = score;
-	changeFrame();
+	if (shot === 2 || shot === 3){
+		changeFrame(1);
+		var frame1Score = score; //var was used so I could use the variable outside this conditional statement
+	}
+	if (shot === 4 || shot === 5){
+		changeFrame(2);
+		if (previousShot === "spare"){
+			let changeFrame1 = document.getElementById("frame1score");
+			changeFrame1.textContent = frame1Score + count;
+		}
+	}
+	if (shot === 6 || shot === 7){
+		changeFrame(3);
+	}
+	if (shot === 8 || shot === 9){
+		changeFrame(4);
+	}
+	if (shot === 11 || shot === 10){
+		changeFrame(5);
+	}
+	if (shot === 12 || shot === 13){
+		changeFrame(6);
+	}
+	if (shot === 14 || shot === 15){
+		changeFrame(7);
+	}
+	if (shot === 16 || shot === 17){
+		changeFrame(8);
+	}
+	if (shot === 18 || shot === 19){
+		changeFrame(9);
+	}
 	return;
 }
 function addSpare(){
@@ -549,40 +580,40 @@ function tenthFrame(shots){
 	changeScore.textContent = score;
 	}
 }
-function changeFrame(){
-	if (shot === 2 || shot === 3){
+function changeFrame(frame){
+	if (frame === 1){
 		let changeFrame1 = document.getElementById("frame1score");
 		changeFrame1.textContent = score;
 	}
-	if (shot === 4 || shot === 5){
+	if (frame === 2){
 		let changeFrame2 = document.getElementById("frame2score");
 		changeFrame2.textContent = score;
 	}
-	if (shot === 7 || shot === 6){
+	if (frame === 3){
 		let changeFrame3 = document.getElementById("frame3score");
 		changeFrame3.textContent = score;
 	}
-	if (shot === 9 || shot === 8){
+	if (frame === 4){
 		let changeFrame4 = document.getElementById("frame4score");
 		changeFrame4.textContent = score;
 	}
-	if (shot === 11 || shot === 10){
+	if (frame === 5){
 		let changeFrame5 = document.getElementById("frame5score");
 		changeFrame5.textContent = score;
 	}
-	if (shot === 13 || shot === 12){
+	if (frame === 6){
 		let changeFrame6 = document.getElementById("frame6score");
 		changeFrame6.textContent = score;
 	}
-	if (shot === 15 || shot === 14){
+	if (frame === 7){
 		let changeFrame7 = document.getElementById("frame7score");
 		changeFrame7.textContent = score;
 	}
-	if (shot === 17 || shot === 16){
+	if (frame === 8){
 		let changeFrame8 = document.getElementById("frame8score");
 		changeFrame8.textContent = score;
 	}
-	if (shot === 19 || shot === 18){
+	if (frame === 9){
 		let changeFrame9 = document.getElementById("frame9score");
 		changeFrame9.textContent = score;
 	}
