@@ -1,4 +1,10 @@
-/* Programmed by Link Kelly (LinkGoesBowling) */
+/*Written by LinkGoesBowling with assistance from StackOverflow
+/*
+Source - https://stackoverflow.com/a/79972465
+Posted by omidhldn, modified by community. See post 'Timeline' for change history
+Retrieved 2026-07-02, License - CC BY-SA 4.0
+*/
+
 .page {
   text-align: center;
   background: #4d4d4d;
@@ -47,14 +53,6 @@ body {
   position: absolute;
   width: calc(1.6vw + 10px);
   height: calc(1.6vw + 10px);
-}
-img {
-  padding: inherit;
-  margin:auto;
-  width: 500px;
-  height: 100px;
-  display: block;
-  position: relative;
 }
 .restart-game {
   text-align: center;
@@ -212,8 +210,8 @@ img {
   width: 17px;
 }
 .frame1{
-  top: 100%;
-  left: 0;
+  /* top: 100%;
+  left: 0; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -228,12 +226,12 @@ img {
   height: 50px;
   width: 40px;
   border: 2px solid black;
-  left: 43px;
-  bottom: 54px;
+  /* left: 43px;
+  bottom: 54px; */
 }
 .frame3{
-  bottom: 108px;
-  left: 87px;
+  /* bottom: 108px;
+  left: 87px; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -242,8 +240,8 @@ img {
   border: 2px solid black;
 }
 .frame4{
-  bottom: 162px;
-  left: 130px;
+  /* bottom: 162px;
+  left: 130px; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -252,8 +250,8 @@ img {
   border: 2px solid black;
 }
 .frame5{
-  bottom: 216px;
-  left: 173px;
+  /* bottom: 216px;
+  left: 173px; */
   text-align: center;
   position: relative;
   background-color: white;
@@ -264,8 +262,8 @@ img {
 .frame6{
   text-align: center;
   position: relative;
-  bottom: 270px;
-  left: 216px;
+  /* bottom: 270px;
+  left: 216px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -274,8 +272,8 @@ img {
 .frame7{
   text-align: center;
   position: relative;
-  bottom: 324px;
-  left: 260px;
+  /* bottom: 324px;
+  left: 260px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -284,8 +282,8 @@ img {
 .frame8{
   text-align: center;
   position: relative;
-  bottom: 378px;
-  left: 304px;
+  /* bottom: 378px;
+  left: 304px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -294,8 +292,8 @@ img {
 .frame9{
   text-align: center;
   position: relative;
-  bottom: 432px;
-  left: 348px;
+  /* bottom: 432px;
+  left: 348px; */
   background-color: white;
   height: 50px;
   width: 40px;
@@ -304,8 +302,8 @@ img {
 .frame10{
   text-align: center;
   position: relative;
-  bottom: 486px;
-  left: 392px;
+  /* bottom: 486px;
+  left: 392px; */
   background-color: white;
   height: 50px;
   width: 70px;
@@ -337,4 +335,13 @@ img {
   top: 0;
   left: 0;
   background-color: gray;
+}
+/*  */
+.scoresheet {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: flex-end;
+  position: relative;
 }
