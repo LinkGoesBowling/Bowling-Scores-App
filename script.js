@@ -311,16 +311,20 @@ function addStrike(){
 	previousShot = 10;
 	strikeButtonPressed = false;
 	const changeScore = document.getElementById("score");
-	changeScore.textContent = score;
+	changeScore.textContent = 10;
 	if (shot === 2 || shot === 3){
 		changeFrame(1);
-		var frame1Score = score; //var was used so I could use the variable outside this conditional statement
+		var frame1Score = 10; //var was used so I could use the variable outside this conditional statement
 	}
 	if (shot === 4 || shot === 5){
 		changeFrame(2);
 		if (previousShot === "spare"){
 			let changeFrame1 = document.getElementById("frame1score");
-			changeFrame1.textContent = frame1Score + count;
+			changeFrame1.textContent = 20;
+		}
+		if (previousShot === 10){
+			let changeFrame1 = document.getElementById("frame1score");
+			changeFrame1.textContent = 30;
 		}
 	}
 	if (shot === 6 || shot === 7){
